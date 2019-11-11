@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #ccc;
+}
+.container{
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pageTag {
+    font-size: 39px;
+    text-align: center;
+    position: relative;
+}
+
+.pageTag::after {
+    content: '';
+    width: 106px;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    background: black;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.p-image{
+    height: 400px;
+    display:flex;
+    flex-wrap:wrap;
+    align-content:center;
+    width: 730px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.p-image div{
+    margin: 0 auto;
+    position: relative;
+}
+.p-image .p-left,.p-image .p-right{
+    width: 200px;
+}
+.p-image .p-middle{
+    width: 300px;
+    text-align: center;
+}
+.p-image div img{
+    width: 100%;
+    border-radius:50%;
+}
+.p-image .p-middle .title{
+    text-align: center;
+    font-weight:bold;
+}
+.p-image .p-left img,.p-image .p-right img{
+    position: absolute;
+    bottom: 0;
+}
+
+/*---------- Footer Styles --------------------*/
+
+.p-social{
+    margin-top: 40px;
+}
+.p-social ul{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    max-width: 750px;
+}
+.p-social ul li{
+    list-style: none;
+    margin: 0 40px;
+}
+.p-social ul li a .fa{
+    font-size:40px;
+    color: #262626;
+    line-height: 80px;
+    transition: .5s;
+}
+.p-social ul li a{
+    position: relative;
+    display: block;
+    width: 70px;height: 70px;
+    background: #fff;
+    text-align: center;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
+    transition: .5s;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+.p-social ul li a:before{
+    content: '';
+    position: absolute;
+    top:10px;
+    left:-20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1;
+    transition: .5s;
+    transform: rotate(0deg) skewY(-45deg);
+
+}
+.p-social ul li a:after{
+    content: '';
+    position: absolute;
+    left:-10px;
+    bottom:-20px;
+    width: 100%;
+    height: 20px;
+    background: #b1b1b1;
+    transition: .5s;
+    transform: rotate(0deg) skewX(-45deg);
+
+}
+.p-social ul li a:hover{
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
+    box-shadow: -50px 50px 10px rgba(0,0,0,0.5);
+}
+.p-social ul li:hover .fa{color: white;}
+.p-social ul li:hover:nth-child(1) a{
+    background: #3b5999;
+}
+.p-social ul li:hover:nth-child(1) a:before{
+    background: #133378;
+}
+.p-social ul li:hover:nth-child(1) a:after{
+    background: #3761ba;
+}
+
+.p-social ul li:hover:nth-child(2) a{
+    background: #55acee;
+}
+.p-social ul li:hover:nth-child(2) a:before{
+    background: #3272a2;
+}
+.p-social ul li:hover:nth-child(2) a:after{
+    background: #3b8dcb;
+}
+
+.p-social ul li:hover:nth-child(3) a{
+    background: #dd4b39;
+}
+.p-social ul li:hover:nth-child(3) a:before{
+    background: #ad3a2c;
+}
+.p-social ul li:hover:nth-child(3) a:after{
+    background: #d2311d;
+}
+
+.p-social ul li:hover:nth-child(4) a{
+    background: #0077B5;
+}
+.p-social ul li:hover:nth-child(4) a:before{
+    background: #0C5B84;
+}
+.p-social ul li:hover:nth-child(4) a:after{
+    background: #0A6B9E;
+}
+
+.p-social ul li:hover:nth-child(5) a{
+    background: #e4405f;
+}
+.p-social ul li:hover:nth-child(5) a:before{
+    background: #bc2642;
+}
+.p-social ul li:hover:nth-child(5) a:after{
+    background: #cf2d4c;
+}
