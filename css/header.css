@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Fira Sans","Lucida Sans Unicode","Lucida Grande",sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+a{
+    text-decoration: none;
+}
+.header-body{
+    height: 646px;
+    width: 100%;
+}
+.header-body img{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.header{
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.header-brand .brand{
+    color: #fff;
+    font-size: 30px;
+}
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.header-links{
+    margin-left: auto;
+}
+.header-links a{
+    font-size: 14px;
+    line-height: 45px;
+    color: #fff;
+    padding:5px 20px;
+    text-transform: uppercase;
+}
+.header-links a:hover{
+    transition: ease-in-out;
+    color: #0ff;
+}
+.brand-tagline{
+    width: 100%;
+    margin: 85px auto;
+    max-width: 317px;
+    color: #fff;
+    text-shadow: 0px 0px 5px black;
+}
+
+/*------------------------hotel form ------------------------------*/
+
+.hotel-form{
+    box-shadow: 0px 0px 8px black;
+    color: #fff;
+}
+.hotel-form table td{
+    padding: 0 20px;
+}
+.hotel-form table td.where{
+    width: 400px;
+}
+.hotel-form table td.where input::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+.hotel-form table td.where input{
+    width: 100%;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #eee;
+    color: #0ff;
+}
+.check-in div,.check-out div,.guest div{
+    border-bottom: 2px solid #eee;
+}
+.hotel-form table td.check-in,.hotel-form table td.check-out{
+    width: 150px;
+}
+.hotel-form table td.guest{
+    width: 200px;
+}
+.hotel-form .form-fields{
+    padding: 12px 20px 15px;
+}
+.primary-btn{
+    background-color: #ee3c35;
+    padding: 8px 25px;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 38px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.place{
+    width:400px;
+    height: 100%;
+    max-height: 225px;
+    overflow: auto;
+    border-radius: 5px;
+}
+.place ul{
+    background: #fff;
+    padding: 5px 0;
+}
+.place ul li{
+    cursor: pointer;
+    padding: 7px 20px;
+}
+.place ul li:hover{
+    background: red;
+}
+li{
+    list-style: none;    
+}
+#n-place{
+    display: none;
+}
+
+/*----------------end hotel form---------------------*/

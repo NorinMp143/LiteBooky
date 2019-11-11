@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+*{
+	padding:0;margin:0;
+}
+body{
+	background: linear-gradient(#272883,#372883);
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	font-family: 'Varela Round';
+}
+a{
+	text-decoration: none;
+}
+.supar-container{
+	max-width: 90%;
+	width:100%;
+	max-height: 90vh;
+	height: 100vh;
+	margin: auto;
+	background: #fff;
+	display: flex;
+}
+.logpart1{
+	width:50%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.container{
+	max-width: 60%;
+	width: 100%;
+	margin:0 auto;
+}
+.logo{
+	font-size: 19px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.login-text{
+	font-size: 20px;
+	color: #999999;
+	margin-bottom: 30px;
+}
+.log-via{
+	display: flex;
+	margin-bottom: 30px;
+}
+.log-via .fb{
+	background: #272883;
+}
+.log-via .g{
+	background: #2f3345;
+}
+.log-via a{
+	color: #fff;
+	font-size: 13px;
+	padding: 8px 20px;
+	border-radius: 4px;
+}
+.log-via a:last-child{
+	margin-left: auto;
+}
+.or{
+	color: #999999;
+	text-align: center;
+}
+.form{
+	margin-top: 10px;
+	overflow: hidden;
+}
+form{
+	margin-top: 30px;
+}
+.form-group{
+	position: relative;
+	margin-bottom: 30px;
+	/*! height: 40px; */
+}
+
+.form-control{
+	font-weight: bold;
+	width: 100%;
+	border:none;
+	box-shadow: none;
+	padding: 10px 0px 2px;
+}
+
+.form-control:focus{
+	outline: none;
+	color: #6600CC;
+}
+
+.form-control:focus::-moz-placeholder{
+	color:#6600CC;
+}
+.input-design{
+	height: 1px;width: 100%;
+	position: absolute;
+	left: 0;bottom: 0;
+	background: #ccc;
+}
+
+.form-control:focus + .input-design{
+	height: 3px;
+	background:linear-gradient(to right,#6600CC,#FF9933);
+	animation: 1s anim;
+}
+@keyframes anim{
+	0%{left:-100%;}
+	100%{left: 0;}
+}
+
+.fp/*forget password*/{
+	float: right;
+}
+.link-via{
+	display: flex;
+}
+.link-via a{
+	color: #000;
+	font-size: 14px;
+	padding: 10px 0;
+	width: 140px;
+	text-align: center;
+	border-radius: 4px;
+	border:2px solid #ccc;
+	transition: 1s ease;
+}
+.link-via a:last-child{
+	margin-left: auto;
+}
+.link-via a:hover{
+	color: #fff;
+	border-left-color: #6600CC;
+	border-right-color: #FF9933;
+	border-bottom-color: #6600CC;
+	border-top-color: #FF9933;
+	background: linear-gradient(45deg, #6600CC, #FF9933);
+	box-shadow: 0px 2px 5px #000;
+}
+.logpart2{
+	background: red;
+	height: 100%;
+	width: 50%;
+	overflow: hidden;
+	position: relative;
+}
+.de{
+	border-radius: 50%;
+	position: absolute;
+}
+.big1{
+	z-index: 100;width: 100%;
+	left: -150px;top: -100px;
+	max-width: 600px;height: 600px;
+	background: linear-gradient( #6600CC, #FF9933);
+}
+.big2{
+	z-index: 99;width: 100%;
+	left: -50px;bottom: -150px;
+	max-width: 400px;height: 400px;
+	background: linear-gradient( #01d5e0,#f003fd);
+}
+.big3{
+	z-index: 98;width: 100%;
+	right: -100px;bottom: 100px;
+	max-width: 300px;height: 300px;
+	background: linear-gradient( #01d5e0,#f003fd);
+}
+.big4{
+	z-index: 97;width: 100%;
+	right: -7px;bottom: -13px;
+	max-width: 300px;height: 300px;
+	background: linear-gradient( #01d5e0,#f003fd);
+}
+.big5{
+	z-index: 96;width: 100%;
+	right: -50px;top:50px;
+	max-width: 300px;height: 300px;
+	background: linear-gradient( #01d5e0,#f003fd);
+}
+.big6{
+	z-index: 95;width: 100%;
+	right: -10px;bottom: -150px;
+	max-width: width: 400px;height: 400px;
+	background: linear-gradient( #01d5e0,#f003fd);
+}
+.big7{
+	z-index: 94;
+	right: -150px;top: -150px;
+	width: 100%;
+	max-width: 400px;height: 400px;
+	background: linear-gradient( #01d5e0,#f003fd);
+}
+.letterDesign{
+	z-index:101;
+	left:0;top:30%;
+	width:100%;
+	position: absolute;
+	display: flex;
+	max-width: 374px;
+}
+.ld-before{
+	width:25%;
+}
+.ld-content{
+	width:75%;
+	font-family: ;
+	font-style: italic;
+	color: #fff;
+}
+.ld-content h2{
+	margin-bottom:10px;
+}
+.signplay{
+	margin-top:30px;
+	background:#fff;
+	max-width:40px;max-height:40px;
+	width:100%;
+	position: relative;
+	display: block;
+	height: 100%;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px darkslategrey;
+}
+.signplay .m{
+	position:absolute;
+	top:50%;left:50%;
+	transform:translate(-50%,-50%);
+}
