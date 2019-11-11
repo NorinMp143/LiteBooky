@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  margin: 0;
+  font-size: 13px;
+  font-family: Arial;
+  background: #f1f1f1;
+}
+a{
+  text-decoration: none;
+}
+.m-head{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+header {
+    color: #6e6f6e;
+    box-shadow: 0px 0px 5px;
+    /*! position: fixed; */
+    width: 100%;
+    /*! height: 100%; */
+    /*! top: 0; */
+    background: #fff;
+    z-index: 9;
+    position: relative;
+}
+.container{
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.head{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-brand{
+    display: flex;
+}
+.brand{
+    margin-right: 22px;
+    color: #33ff34;
+    font-size: 20px;
+}
+.brand-tag {
+    align-self: center;
+    padding-left: 22px;
+    font-size: 12px;
+    border-left: 2px solid #6f6f6f;
+}
+.header-links nav a{
+    margin-right: 25px;
+}
+.header-links nav a:last-child{
+    margin-right: 0;
+}
+.header-links nav a:hover{
+    color:#000;
+}
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+    <div class="m-head">
+        <header>
+            <div class="container">
+                <div class="head">
+                    <div class="header-brand">
+                        <div class="brand" ng-click="">LiteBooky</div>
+                        <div class="brand-tag">India’s Largest Hospitality Company</div>
+                    </div>
+                    <div class="header-links">
+                        <nav>
+                            <a href="">Sign Up/Sign In</a>
+                            <a href="">Blog</a>
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+<div class="header">
+  <h2>Blog Name</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
