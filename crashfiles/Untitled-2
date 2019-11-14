@@ -1,0 +1,5 @@
+body{
+background:url('banner.jgp');
+background-size:cover;
+font-family:Arial; 
+}
