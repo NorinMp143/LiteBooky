@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.m-head{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+header {
+    color: #6e6f6e;
+    box-shadow: 0px 0px 5px;
+    /*! position: fixed; */
+    width: 100%;
+    /*! height: 100%; */
+    /*! top: 0; */
+    background: #fff;
+    z-index: 9;
+    position: relative;
+}
+.container{
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.head{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-brand{
+    display: flex;
+}
+.brand{
+    margin-right: 22px;
+    color: #33ff34;
+    font-size: 20px;
+}
+.brand-tag {
+    align-self: center;
+    padding-left: 22px;
+    font-size: 12px;
+    border-left: 2px solid #6f6f6f;
+}
+.header-links nav a{
+    margin-right: 25px;
+}
+.header-links nav a:last-child{
+    margin-right: 0;
+}
+.header-links nav a:hover{
+    color:#000;
+}
+
+.room-detail{
+  margin-top: 60px;
+  padding-bottom: 30px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.mySlides {display: none;}
+
+img {vertical-align: top-middle;}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+body{
+  margin: 0;
+  font-size: 13px;
+	background-color: powderblue;	
+}
+button{
+	width: 70px;
+	background-color: red;
+	font-style: cursive;
+}
+h3{
+	font-style: cursive;
+}
+h2{
+	background-color:grey;
+	font-style: cursive;
+	font-size:20px;
+	width: 100%;
+	text-align: center;
+
+}
+.text {
+  color: black;
+  font-size: 30px;
+  font-family: bold,cursive;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 1px;
+  width: 1px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+    <div class="m-head">
+        <header>
+            <div class="container">
+                <div class="head">
+                    <div class="header-brand">
+                        <div class="brand" ng-click="">LiteBooky</div>
+                        <div class="brand-tag">India’s Largest Hospitality Company</div>
+                    </div>
+                    <div class="header-links">
+                        <nav>
+                            <a href="login.html">Sign Up/Sign In</a>
+                            <a target="_blank" href="blog.html">Blog</a>
+                            <a target="_blank" href="team.html">Team</a>
+                            <a target="_blank" href="career.html">Career</a>
+                            <a target="_blank" href="contactus.html">Contact Us</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+      </div>
+  <div class="room-detail">
+      <h2><marquee behavior="scroll" direction="left">LITE-BOOKY..</marquee></h2>
+        <div class="slideshow-container ">
+
+      <div class="mySlides">
+      
+        <img src="img/5.jpg" style="width:100% ">
+        
+        
+      </div>
+
+      <div class="mySlides ">
+      
+        <img src="img/6.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides">
+        
+        <img src="img/7.jpg" style="width:100%">
+        
+      </div>
+      <div class="mySlides ">
+      
+        <img src="img/goa.jpg" style="width:100%">
+
+      </div>
+
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+      </div>
+
+      <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); 
+      }
+      </script>
+      <div class="container">
+        <h1>available sources</h1>
+        <image src="img/z.jpg" alt="Submit" width="30" height="30" hspace="30px"; >
+        <image src="img/x.png" alt="Submit" width="30" height="30" hspace="30px"; >
+        <image src="img/c.png" alt="Submit" width="30" height="30" hspace="30px"; >
+          <image src="img/v.png" alt="Submit" width="48" height="48" hspace="30px"; ><br>
+        <h3>The rooms of Hotel Cellai are extremely comfortable, equipped with warm and precious materials and personalized with authentic antiques expertly chosen one by one in the many markets of Tuscany.
+
+        This passion for detail contributes to the intimate, tranquil atmosphere which transforms each room into a pleasant refuge within the bustling city of Florence, in a place where guests can relax after a day spent touring and admiring the many beautiful artistic and architectural sites in the city which cradled the Renaissance.
+
+        Each bedroom at Cellai Hotel  has  been individually designed in a fresh  concept mixing tradition, precious fabrics, period furnitures, italian vintage design, original photos, prints and paintings.
+        Rooms  are light and comfortable and well appointed with a writing desk, wireless internet access and flat screen TV's.  Rooms overlooking the front have double soundproof windows.</h3><br>
+        <section>
+          <center><button >register</button></center>
+        </section>
+    </div>
+</div>
+</body>
+</html>

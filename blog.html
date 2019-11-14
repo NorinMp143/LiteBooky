@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-image: url(img/Pet-Blogbanner-Image.webp);
+  width: 100%;
+  padding: 20px;
+}
+.fake1img {
+  background-image: url(img/places-to-visit-bangkok-1024x683.webp);
+  width: 100%;
+  padding: 20px;
+}
+    .fake2img {
+  background-image: url(img/budget-trip-pattaya.webp);
+  width: 100%;
+  padding: 20px;
+}
+       .fake3img {
+  background-color:crimson;
+  width: 100%;
+  padding: 20px;
+}
+    .fake4img{
+        background-color: orangered;
+    }
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+  
+    a:hover,a:active{
+        background-color:green;
+    }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <li style="float:right" class="active"><a href="index.html"><img src="img/website-homepage-icon-26.jpg"   width="100" height="100"></a></li>
+  <h2>Blog </h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Travelling Without Pets Taking A Toll On Them? Not Anymore!</h2>
+      <h5> Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;"></div>
+      <p>Along pets :)</p>
+      <p>Life is a roller-coaster ride, full of surprises and tear-jolting moments, yet we need to move on from our love, pain, family and friends. Friends make life easy, they support you at every tough turn of your life, stand up in your times of need and most importantly, comfort you when the going gets difficult. But your slobby pet always gets neglected,this time say NO !</p>
+    </div>
+    <div class="card">
+      <h2>Planning to visit Bangkok?...</h2>
+      <h5></h5>
+      <div class="fake1img" style="height:200px;"></div>
+      <p>WOW Bangkok..</p>
+      <p>Being one of the most sought-after tourist destinations, there is nothing that will not cater to your bucket-list in Bangkok. The city hosts some of the Places To Visit In Bangkok, which features some sprawling beaches, party hotspots, grooving nightlife activities and relaxing beach-view resorts which can leave you drooling for the rest of your life!</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Planning a Budget Trip?...</h2>
+      <div class="fake2img" style="height:100px;"></div>
+      <p>The east-side of Thailand’s Gulf coast holds the beautiful island of Pattaya is adorned with spectacular beaches and lush-green hiking spots. It is full of lodgings, shopping centers, bars, and dance clubs. A trip to Pattaya On a Budget happens is equally worth it. It is a place which thrilling and exotic enough to attract all kinds of travelers.
+
+A couple of days to explore around this rambling town without missing out on any attraction is something that every traveler must plan and prepare a Pattaya Travel Budget.</p>
+    </div>
+    <div class="card">
+      <center><h3>Popular Post</h3></center>
+      <div class="fake3img"><a href="blogbeach.html" target="_blank">Beach Destination</a></div><br>
+      <div class="fake3img"><a href="blogsolo.html" target="_blank">SoloTravel</a></div><br>
+      <div class="fake3img"><a href="blogsolof.html" target="_blank">Solo Female  Travel</a></div>
+    </div>
+    <div class="card" >
+        <div class="fake4img">
+      <center><a href="team.html" target="_blank"><h3>Follow Us</h3></a></center></div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>LITEBOOKY</h2>
+     <script>
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = "#"+randomColor;
+},2000);
+    </script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!doctype html>
+<!--captureType is undefined
+event.target.getElementByClassName(...)[i] is undefined-->
+<html>
+	<head>
+		<title>Appy Store</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/footer.css">
+		<style>
+		
+		
+		header {
+    color: #6e6f6e;
+    box-shadow: 0px 0px 5px;
+    /*! position: fixed; */
+    width: 100%;
+    /*! height: 100%; */
+    /*! top: 0; */
+    background: #fff;
+    z-index: 9;
+    position: relative;
+}
+.container{
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.head{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-brand{
+    display: flex;
+}
+.brand{
+    margin-right: 22px;
+    color: #33ff34;
+    font-size: 20px;
+}
+.brand-tag {
+    align-self: center;
+    padding-left: 22px;
+    font-size: 12px;
+    border-left: 2px solid #6f6f6f;
+}
+.header-links nav a{
+    margin-right: 25px;
+}
+.header-links nav a:last-child{
+    margin-right: 0;
+}
+.header-links nav a:hover{
+    color:#000;
+}		
+a{
+    text-decoration: none;
+}		
+		
+		
+.contact_info
+{
+	width: 100%;
+	padding-top: 70px;
+}
+.contact_info_item
+{
+	width: calc((100% - 60px) / 3);
+	height: 100px;
+	border: solid 1px #e8e8e8;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+	padding-left: 32px;
+	padding-right: 15px;
+}
+.contact_info_image
+{
+	width: 35px;
+	height: 35px;
+	text-align: center;
+}
+.contact_info_image img
+{
+	max-width: 100%;
+}
+.contact_info_content
+{
+	padding-left: 17px;
+}
+.contact_info_title
+{
+	font-weight: 500;
+}
+.contact_info_text
+{
+	font-size: 12px;
+	color: rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 991px){
+.contact_info_item {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contact_info_item:last-child {
+    margin-bottom: 0px;
+}
+}
+/*---------------------form control------------------------------*/
+.contact_form {
+    padding-top: 85px;
+}
+.contact_form_title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 37px;
+}
+.widthset,.bottomset{
+	margin-bottom:30px;
+}
+.form_control .widthset .form-control{
+	width:calc((100% - 60px) / 3);
+}
+@media only screen and (max-width: 767px){
+	.form_control .widthset .form-control{
+		margin-bottom: 30px;
+		width: 100%;
+	}
+	.form_control .widthset .form-control:last-child {
+		margin-bottom: 0px;
+	}
+}
+		</style>
+	</head>
+	<body>
+	
+	<div class="whole_container">
+		<header>
+            <div class="container">
+                <div class="head">
+                    <div class="header-brand">
+                        <div class="brand"><a href="index.html">LiteBooky</a></div>
+                        <div class="brand-tag">India’s Largest Hospitality Company</div>
+                    </div>
+                    <div class="header-links">
+                        <nav>
+                            <a href="login.html">Sign Up/Sign In</a>
+                            <a target="_blank" href="blog.html">Blog</a>
+                            <a target="_blank" href="team.html">Team</a>
+                            <a target="_blank" href="career.html">Career</a>
+                            <a target="_blank" href="contactus.html">Contact Us</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+		
+		<!-- Contact Info -->
+
+		<div class="contact_info">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between">
+
+							<!-- Contact Item -->
+							<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+								<div class="contact_info_image"><img src="img/contact_1.png" alt=""></div>
+								<div class="contact_info_content">
+									<div class="contact_info_title">Phone</div>
+									<div class="contact_info_text">+38 068 005 3570</div>
+								</div>
+							</div>
+
+							<!-- Contact Item -->
+							<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+								<div class="contact_info_image"><img src="img/contact_2.png" alt=""></div>
+								<div class="contact_info_content">
+									<div class="contact_info_title">Email</div>
+									<div class="contact_info_text">litebooky@gmail.com</div>
+								</div>
+							</div>
+
+							<!-- Contact Item -->
+							<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+								<div class="contact_info_image"><img src="img/contact_3.png" alt=""></div>
+								<div class="contact_info_content">
+									<div class="contact_info_title">Address</div>
+									<div class="contact_info_text">10 Suffolk at Soho, Jalandhar, India</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Contact Form -->
+
+		<div class="contact_form">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="contact_form_container">
+							<div class="contact_form_title">Get in Touch</div>
+
+							<form action="#" class="form_control">
+								<div class="widthset d-flex flex-md-row flex-column justify-content-between align-items-between">
+									<input type="name" class="form-control" placeholder="Your name" required="required" data-error="Name is required.">
+									<input type="email" class="form-control" placeholder="Your email" required="required" data-error="Email is required.">
+									<input type="number" class="form-control" placeholder="Your phone number">
+								</div>
+								<div class="bottomset">
+									<textarea class="form-control" name="message" rows="6" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
+								</div>
+								<div class="bottomset">
+									<button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel"></div>
+		</div>
+		<footer>
+			<div class="footer_hotels container">
+				<div class="footerDestinations__heading">LiteBooky Hotels</div>
+				<div class="footerDestinations__cityGrid">
+					<a href="#">Hotels near me</a>
+					<a href="#">Hotels in Mumbai</a>
+					<a href="#">Hotels in Delhi</a>
+					<a href="#">Hotels in Jaipur</a>
+					<a href="#">Hotels in Manali</a>
+					<a href="#">Hotels in Udaipur</a>
+					<a href="#">Hotels in Amritsar</a>
+					<a href="#">Hotels in Shimla</a>
+					<a href="#">Hotels in Goa</a>
+					<a href="#">Hotels in Ahmedabad</a>
+					<a href="#">Hotels in Kolkata</a>
+					<a href="#">Hotels in Shillong</a>
+					<a href="#">Hotels in Darjeeling</a>
+					<a href="ss1.html">Travel Guide</a>
+					<a href="#">All Cities Hotels</a>
+					<a href="#">Coupons</a>
+				</div>
+			</div>
+			<div class="footerLinks">
+				<div class="footerAppIcons__container">
+					<div class="footerAppIcons__topLinks">
+						<div class="footerAppIcons__appsMessage">
+							<span>Download LiteBooky app for exciting offers.</span>
+						</div>
+						<div class="appLinks">
+							<div>
+								<img src="img/footer/googleplay.png" alt="Google Play App Store">
+							</div>
+							<div>
+								<img src="img/footer/applestore.png" alt="Apples Store">
+							</div>
+						</div>
+					</div>
+					<div class="footerAppIcons__topLinks">
+						<div class="footerAppIcons__secondryLinksContainer">
+							<a href="about.html" target="_blank">About Us</a>
+							<a href="team.html" target="_blank">Teams</a>
+							<a href="blog.html" target="_blank">Blogs</a>
+							<a href="career.html" target="_blank">Careers</a>
+						</div>
+					</div>
+					<div class="footerAppIcons__topLinks">
+						<div class="footerAppIcons__secondryLinksContainer">
+							<a href="termsadpolicy.html" target="_blank">Terms and conditions</a>
+							<a href="#" target="_blank">Guest Policies</a>
+							<a href="#" target="_blank">Privacy Policy</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__secondary-wrapper">
+				<div class="company-logo">
+					<h1>LiteBooky</h1>
+				</div>
+				<small class="footer__copyright-text">
+					Copyright 2019 trivago | All rights reserved.
+				</small>
+			</div>
+		</footer>
+	</div>
+	<script>
+		function show(x){
+			var v=document.getElementById(x);
+			if(v.style.display=="none"){
+				v.style.display='block';
+			}
+			else{
+				v.style.display='none';
+			}
+		}
+	</script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	</body>
+</html> 

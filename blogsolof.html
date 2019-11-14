@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-image: url(img/f.webp);
+  width: 100%;
+  padding: 20px;
+}
+.fake1img {
+  background-image: url(img/feel.webp);
+  width: 100%;
+  padding: 20px;
+}
+    .fake2img {
+  background-image: url(img/budget-trip-pattaya.webp);
+  width: 100%;
+  padding: 20px;
+}
+       .fake3img {
+  background-color:crimson;
+  width: 100%;
+  padding: 20px;
+}
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+  
+    a:hover,a:active{
+        background-color:green;
+    }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <li style="float:right" class="active"><a href="index.html"><img src="img/website-homepage-icon-26.jpg"   width="100" height="100"></a></li>
+  <h2>Blog </h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Things Change, So Did The Himalayas…</h2>
+      <h5> Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;"></div>
+     
+      <p>With nostalgia in her voice, my mother narrated endless tales from her journey to places like Khajiar, Dalhousie, Dharamshala, Shimla, Kullu, Manali, Rohtang; and I grew 21 dreaming of them. The lush green fields, the mountains, the endless sky, the stars kissing snow-capped hills were all very mesmerizing in my imagination, and I had avoided seeing pictures of them because I wanted to experience the Himalayas in reality. I wonder why a trip to any of these places never happened in all these years. A family or college trip, with cousins or friends…nothing at all! But now, alas! The wait was going to have a full stop!</p>
+    </div>
+    <div class="card">
+      <h2>Impromptu It Is!</h2>
+      <h5></h5>
+      <div class="fake1img" style="height:200px;"></div>
+      
+      <p>Another new year eve. Just another day on the calendar!
+
+Vacant hostel rooms and solitude, a company. And such is the effect of this camaraderie, that it makes your dormant brain go frenzy. The aftermath was yet another solo trip.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Planning a Budget Trip?...</h2>
+      <div class="fake2img" style="height:100px;"></div>
+      <p>The east-side of Thailand’s Gulf coast holds the beautiful island of Pattaya is adorned with spectacular beaches and lush-green hiking spots. It is full of lodgings, shopping centers, bars, and dance clubs. A trip to Pattaya On a Budget happens is equally worth it. It is a place which thrilling and exotic enough to attract all kinds of travelers.
+
+A couple of days to explore around this rambling town without missing out on any attraction is something that every traveler must plan and prepare a Pattaya Travel Budget.</p>
+    </div>
+    <div class="card">
+      <center><h3>Popular Post</h3></center>
+      <div class="fake3img"><a href="blogbeach.html" target="_blank">Beach Destination</a></div><br>
+      <div class="fake3img"><a href="blogsolo.html" target="_blank">SoloTravel</a></div><br>
+    
+    </div>
+    <div class="card" >
+        <div class="fake4img">
+      <center><a href="team.html" target="_blank"><h3>Follow Us</h3></a></center></div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>LITEBOOKY</h2>
+     <script>
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = "#"+randomColor;
+},2000);
+    </script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-image: url(img/solo.webp);
+  width: 100%;
+  padding: 20px;
+}
+.fake1img {
+  background-image: url(img/wilson-hill-valsad-ho-valsad-tourist-attraction-4js1ctz.jpg);
+  width: 100%;
+  padding: 20px;
+}
+    .fake2img {
+  background-image: url(img/budget-trip-pattaya.webp);
+  width: 100%;
+  padding: 20px;
+}
+       .fake3img {
+  background-color:crimson;
+  width: 100%;
+  padding: 20px;
+}
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+  
+    a:hover,a:active{
+        background-color:green;
+    }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <li style="float:right" class="active"><a href="index.html"><img src="img/website-homepage-icon-26.jpg"   width="100" height="100"></a></li>
+  <h2>Blog </h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>It’s Not The Mountains I Conquered But It’s The Region That Conquered Me !</h2>
+      
+      <div class="fakeimg" style="height:200px;"></div>
+      <p>Travel makes paths itself, I never plan it!</p>
+      <p>
+
+Before I start sharing my experience of a trip, I would like to introduce myself and what keeps me travelling.
+
+I never believe in going on trips, instead, I travel to the place: I absorb the place and this helps me to keep heads-on!
+I never take a route that is so often travelled by, instead, I have learned to make my journey interesting.
+I have been to places to love and admire nature but at the same time, I have learned how we humans recklessly are destroying the places we love to go.
+In this blog, I would highlight one of my cherished travel destinations. I have termed it as favorite because of unexpected things that led me to the place.
+
+Himachal Pradesh is the most sought after destination for any traveler. I managed to get a few days leave from my conventional routine to escape to the alluring mountains of Himalayas. Due to less number of leaves, I planned my holiday to Shimla but what happened next was more than profound.</p>
+    </div>
+    <div class="card">
+      <h2>Bestr Places To Travel Alone In North India</h2>
+      <h5></h5>
+      <div class="fake1img" style="height:200px;"></div>
+      <p>WOW Bangkok..</p>
+      <p>Here’s to the spirit of travelling. The kind that opens many doors to the unknown and makes one rejoice the uncertainties! The kind that makes one believe in magic.
+
+To explorations that involve wandering around an unfamiliar town, taking a little break for a chai-tapri, smiling back at kids on the street and of course café hopping! Here’s to roads that add perspective. Here’s to travel, the kind that makes one unleash and sometimes, unlearn.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>You may like it...</h2>
+      <div class="fake2img" style="height:100px;"></div>
+      <p>
+        Darang, Himachal Pradesh
+Kinnaur, Himachal Pradesh
+Kaza, Spiti
+Jaisalmer, Rajasthan
+Valley of Flowers, Uttarakhand
+Roopkund Trek, Uttrakhand
+        
+
+</p>
+    </div>
+    <div class="card">
+      <center><h3>Popular Post</h3></center>
+      <div class="fake3img"><a href="blogbeach.html" target="_blank">Beach Destination</a></div><br>
+      
+      <div class="fake3img"><a href="blogsolof.html" target="_blank">Solo Female  Travel</a></div>
+    </div>
+    <div class="card" >
+        <div class="fake4img">
+      <center><a href="team.html" target="_blank"><h3>Follow Us</h3></a></center></div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>LITEBOOKY</h2>
+     <script>
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = "#"+randomColor;
+},2000);
+    </script>
+</div>
+
+</body>
+</html>

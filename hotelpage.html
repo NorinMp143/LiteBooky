@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+
+<div style="background-color:orange;padding:15px;">
+    <img src="img/150px-Taj_Hotels_logo.svg.png" style="float:right "  >
+  <h1>THE TAJ</h1>
+  <h3>Mumbai,Maharastra,India</h3>
+    
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+   
+    <div class="menuitem"><a href="https://en.wikipedia.org/wiki/Taj_Hotels" target="_blank">History</a></div>
+    <div class="menuitem"><a href="gallary.html">Gallery</a></div>
+      <div class="menuitem"><a href="#">Rooms</a></div>
+      <div class="menuitem"><a href="https://www.google.com/maps/place/The+Taj+Mahal+Palace/@18.9217291,72.8330309,15z/data=!4m8!3m7!1s0x0:0xc0290485a4d73f57!5m2!4m1!1i2!8m2!3d18.9217291!4d72.8330309" target="_blank">Location</a></div> 
+      <div class="menuitem"><a href="index.html">Home</a></div>
+  </div>
+
+  <div class="main">
+    <h2>The TAJ</h2>
+    <p>Taj Hotels is a chain of luxury hotels and a subsidiary of the Indian Hotels Company Limited; headquartered at Express Towers, Nariman Point in Mumbai. Incorporated by the founder of the Tata Group, Jamsetji Tata, in 1903, the company is a part of the Tata Group, one of India's largest business conglomerates.</p>
+    <video style="width:100%" controls loop autoplay>
+        <source src="video/final_5dcaaf6c24e78e0014a3354b_865242.mp4" type="video/mp4">
+          <source src="video/final_5dcaaf6c24e78e0014a3354b_865242.ogg" type="video/ogg">
+      </video>
+      
+  </div>
+
+  <div class="right">
+    <h2>What?</h2>
+    <p>Parent organization: Tata Group
+Customer service: 1800 11 1825
+Founder: Jamsetji Tata
+Founded: 1903
+CEO: Puneet Chhatwal (6 Nov 2017–)
+</p>
+    <h2>Where?</h2>
+    <p>Headquarters: Mumbai</p>
+    <h2>Price?</h2>
+    <p>The Walk is free!</p>
+  </div>
+</div>
+
+
+<div style="background-color:orange;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> LITEBOOKY</div>
+<script>
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = "#"+randomColor;
+},2000);
+    </script>
+</body>
+</html>

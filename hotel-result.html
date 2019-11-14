@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/hotel-result.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <script src="js/1.7.8/angular.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            var url = document.location.href,
+                params = url.split('?')[1].split('&'),
+                data = {}, tmp;
+            for (var i = 0, l = params.length; i < l; i++) {
+                tmp = params[i].split('=');
+                data[tmp[0]] = tmp[1];
+            }
+            document.getElementById('dt').value = data.place;
+        }
+    </script>
+</head>
+<body ng-app="app" ng-controller="mycr">
+    <div class="m-head">
+        <header>
+            <div class="container">
+                <div class="head">
+                    <div class="header-brand">
+                        <div class="brand"><a href="index.html">LiteBooky</a></div>
+                        <div class="brand-tag">India’s Largest Hospitality Company</div>
+                    </div>
+                    <div class="header-links">
+                        <nav>
+                            <a href="login.html">Sign Up/Sign In</a>
+                            <a target="_blank" href="blog.html">Blog</a>
+                            <a target="_blank" href="team.html">Team</a>
+                            <a target="_blank" href="career.html">Career</a>
+                            <a target="_blank" href="contactus.html">Contact Us</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="m-hotel-form">
+                <div class="form-fields">
+                    <table>
+                        <tr>
+                            <td class="where">Where</td>
+                            <td class="check-in">Check-in</td>
+                            <td  class="check-out">check-out</td>
+                            <td class="guest">Guests</td>
+                            <td rowspan="2"><button class="primary-btn" id="hr-search">Search</button></td>
+                        </tr>
+                        <tr>
+                            <td class="where"><input type="text" ng-model="fil2" placeholder="Enter-destination or Hotel Name" value="place" id="dt"></td>
+                            <td class="check-in"><div>04 Nov, Mon</div></td>
+                            <td class="check-out"><div>05 Nov, Tue</div></td>
+                            <td class="guest"><div>2 Guests, 1 Room</div></td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+    </div>
+    <div class="place" id="n-place">
+        <ul ng-repeat="x in places|filter:fil2">
+            <li>{{ x }}</li>
+        </ul>
+    </div>
+    <div class="hotels-results">
+        
+        <div class="" ng-repeat="x in hDetail|filter:{name:fil,spacific:fil2}">
+            <div class="h-deatil">
+                <div class="part1">
+                    <div class="img-de">
+                        <img src="img/itc.jpg" alt="">
+                    </div>
+                </div>
+                <div class="part2">
+                    <div class="hotel-content">
+                        <div class="part1">
+                            <h2 style="text-overflow: ellipsis;white-space: nowrap;padding-right: 10px;overflow: hidden;">{{ x.name }}</h2>
+                            <h5 class="hlt-text">{{ x.place }}</h5>
+                            <div class="extra-d">
+                                <p class="rating">{{x.rate}}/5.0</p>
+                                <p class="hlt-text">{{ x.feed }} ({{ x.reviews }} reviews)</p>
+                                <p class="tag">Free cancellation</p>
+                            </div>
+                        </div>
+                        <div class="part2">
+                            <div class="p-off">{{x.pOff}}% Off</div>
+                            <div><h4 class="hlt-text"><del>{{"Rs "+x.oldprice}}</del></h4></div>
+                            <div><h3>Rs {{x.newprice}}</h3></div>
+                            <div><h6 class="hlt-text">1 Room/Night</h6></div>
+                            <div><a href="hotelpage.html" class="primary-btn">Book Now</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shortby">
+        <div class="" style="display: block;">
+            <div>Search By Hotel Name</div>
+            <div><input type="text" id="h-name" placeholder="Enter Hotel Name" ng-model="fil"></div>
+        </div>
+    </div>
+    <div class="noplace">
+        <h1>Sorry, Something Went Wrong!</h1>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".where input").focusin(function(){
+                $("#n-place").show();
+                $(".where").css("color","#0ff");
+                $("#dt").css("border-color","#0ff");
+            });
+            $("#n-place ul li").click(function(){
+                $("#n-place").hide();
+                var x = $(this).text();
+                $("#dt").val(x);
+            });
+            $("#hr-search").click(function(){
+                $(".hotels-results").show();
+            })
+        })
+    </script>
+    <script>
+        var App = angular.module("app",[]);
+        App.controller("mycr",["$scope",function(s){
+            s.fil;
+            s.fil2;
+            s.places=["Rajasthan","Punjab","Delhi","Chandigadh","Haryana","Mumbai",
+                        "Uttar Pradesh","Banglore"];
+            s.hDetail = [
+                //mumbai state
+                {name:"ITC Grand Central",place:"Parel",rate:4.3,feed:"Excellent",reviews:"480",pOff:10,oldprice:"15,750",newprice:"12,600",spacific:"Mumbai"},
+                {name:"The Orchid",place:"Western Suburbs",rate:3.8,feed:"Good",reviews:"788",pOff:10,oldprice:"9,999",newprice:"8,999",spacific:"Mumbai"},
+                {name:"Four Seasons Hotel",place:"Worli",rate:4.5,feed:"Wonderful",reviews:"641",pOff:15,oldprice:"19,750",newprice:"17,000",spacific:"Mumbai"},
+                {name:"Taj Mahal Tower",place:"Colaba",rate:4.8,feed:"Exceptional",reviews:"1,536",pOff:5,oldprice:"22,500",newprice:"21,500",spacific:"Mumbai"},
+                {name:"Sahara Star",place:"Western Suburbs",rate:3.9,feed:"Good",reviews:"467",pOff:12,oldprice:"15,550",newprice:"12,500",spacific:"Mumbai"},
+                {name:"Sofitel Mumbai BKC",place:"Bandra East",rate:4.6,feed:"Wonderful",reviews:"631",pOff:13,oldprice:"19,750",newprice:"16,649",spacific:"Mumbai"},
+                {name:"VITS",place:"Western Suburbs",rate:3.2,feed:"Good",reviews:"324",pOff:20,oldprice:"7,499",newprice:"5,999",spacific:"Mumbai"},
+                {name:"Trident",place:"Nariman Point",rate:4.6,feed:"Wonderful",reviews:"1,018",pOff:10,oldprice:"15,500",newprice:"12,500",spacific:"Mumbai"},
+                {name:"Ibis Mumbai Airport",place:"Western Suburbs",rate:3.7,feed:"Good",reviews:"341",pOff:18,oldprice:"10,750",newprice:"8,499",spacific:"Mumbai"},
+                {name:"Trident Bandra Kurla Mumbai",place:"Bandra East",rate:4.6,feed:"Wonderful",reviews:"462",pOff:25,oldprice:"20,750",newprice:"15,818",spacific:"Mumbai"},
+                {name:"The Taj Mahal Palace",place:"Colaba",rate:4.8,feed:"Exceptional",reviews:"155",pOff:11,oldprice:"33,000",newprice:"30,000",spacific:"Mumbai"},
+                {name:"Hotel Sea Princess",place:"Western Suburbs",rate:3.7,feed:"Good",reviews:"397",pOff:12,oldprice:"10,399",newprice:"9,199",spacific:"Mumbai"},
+                {name:"The LaLit",place:"Western Suburbs",rate:4.1,feed:"Very Good",reviews:"786",pOff:11,oldprice:"19,750",newprice:"17,000",spacific:"Mumbai"},
+                {name:"Ramada Plaza",place:"Western Suburbs",rate:3.7,feed:"Good",reviews:"292",pOff:35,oldprice:"15,095",newprice:"9,812",spacific:"Mumbai"},
+                {name:"Grand Hyatt",place:"Santacruz",rate:4.4,feed:"Excellent",reviews:"1,023",pOff:13,oldprice:"19,750",newprice:"17,000",spacific:"Mumbai"},
+                {name:"ITC Maratha Mumbai",place:"Western Suburbs",rate:4.4,feed:"Excellent",reviews:"325",pOff:19,oldprice:"22,750",newprice:"18,500",spacific:"Mumbai"},
+                {name:"JW Marriott Mumbai Sahar",place:"Western Suburbs",rate:4.6,feed:"Wonderful",reviews:"363",pOff:13,oldprice:"15,750",newprice:"13,400",spacific:"Mumbai"},
+                {name:"The Oberoi Mumbai",place:"Nariman Point",rate:4.8,feed:"Exceptional",reviews:432,pOff:13,oldprice:"19,750",newprice:"17,250",spacific:"Mumbai"},
+                {name:"Waterstones Hotel",place:"Western Suburbs",rate:4.0,feed:"Very Good",reviews:244,pOff:11,oldprice:"9,599",newprice:"8,399",spacific:"Mumbai"},
+                {name:"Taj Santacruz",place:"Western Suburbs",rate:4.7,feed:"Exceptional",reviews:213,pOff:7,oldprice:"19,599",newprice:"18,500",spacific:"Mumbai"},
+                {name:"Mirage Hotel",place:"Western Suburbs",rate:3.9,feed:"Good",reviews:555,pOff:11,oldprice:"9,599",newprice:"6,650",spacific:"Mumbai"},
+                {name:"Taj Lands End",place:"Western Suburbs",rate:4.6,feed:"Wonderful",reviews:678,pOff:21,oldprice:"29,599",newprice:"24,350",spacific:"Mumbai"},
+                //rajasthan
+                {name:"ITC Grand Central",place:"Parel",rate:4.3,feed:"Excellent",reviews:"480",pOff:10,oldprice:"15,750",newprice:"12,600",spacific:"rajasthan"},
+                {name:"The Orchid",place:"Western Suburbs",rate:3.8,feed:"Good",reviews:"788",pOff:10,oldprice:"9,999",newprice:"8,999",spacific:"rajasthan"},
+                {name:"Four Seasons Hotel",place:"Worli",rate:4.5,feed:"Wonderful",reviews:"641",pOff:15,oldprice:"19,750",newprice:"17,000",spacific:"rajasthan"},
+                {name:"Taj Mahal Tower",place:"Colaba",rate:4.8,feed:"Exceptional",reviews:"1,536",pOff:5,oldprice:"22,500",newprice:"21,500",spacific:"rajasthan"},
+                {name:"Sahara Star",place:"Western Suburbs",rate:3.9,feed:"Good",reviews:"467",pOff:12,oldprice:"15,550",newprice:"12,500",spacific:"rajasthan"},
+                {name:"Sofitel Mumbai BKC",place:"Bandra East",rate:4.6,feed:"Wonderful",reviews:"631",pOff:13,oldprice:"19,750",newprice:"16,649",spacific:"rajasthan"},
+                {name:"VITS",place:"Western Suburbs",rate:3.2,feed:"Good",reviews:"324",pOff:20,oldprice:"7,499",newprice:"5,999",spacific:"rajasthan"},
+                {name:"Trident",place:"Nariman Point",rate:4.6,feed:"Wonderful",reviews:"1,018",pOff:10,oldprice:"15,500",newprice:"12,500",spacific:"rajasthan"},
+                //Haryana
+                {name:"ITC Grand Central",place:"Parel",rate:4.3,feed:"Excellent",reviews:"480",pOff:10,oldprice:"15,750",newprice:"12,600",spacific:"Haryana"},
+                {name:"The Orchid",place:"Western Suburbs",rate:3.8,feed:"Good",reviews:"788",pOff:10,oldprice:"9,999",newprice:"8,999",spacific:"Haryana"},
+                {name:"Four Seasons Hotel",place:"Worli",rate:4.5,feed:"Wonderful",reviews:"641",pOff:15,oldprice:"19,750",newprice:"17,000",spacific:"Haryana"},
+                {name:"Taj Mahal Tower",place:"Colaba",rate:4.8,feed:"Exceptional",reviews:"1,536",pOff:5,oldprice:"22,500",newprice:"21,500",spacific:"Haryana"},
+                {name:"Sahara Star",place:"Western Suburbs",rate:3.9,feed:"Good",reviews:"467",pOff:12,oldprice:"15,550",newprice:"12,500",spacific:"Haryana"},
+                {name:"Sofitel Mumbai BKC",place:"Bandra East",rate:4.6,feed:"Wonderful",reviews:"631",pOff:13,oldprice:"19,750",newprice:"16,649",spacific:"Haryana"},
+                {name:"VITS",place:"Western Suburbs",rate:3.2,feed:"Good",reviews:"324",pOff:20,oldprice:"7,499",newprice:"5,999",spacific:"Haryana"},
+                {name:"Trident",place:"Nariman Point",rate:4.6,feed:"Wonderful",reviews:"1,018",pOff:10,oldprice:"15,500",newprice:"12,500",spacific:"Haryana"},
+                //UttarPradesh
+                {name:"ITC Grand Central",place:"Parel",rate:4.3,feed:"Excellent",reviews:"480",pOff:10,oldprice:"15,750",newprice:"12,600",spacific:"Uttar Pradesh"},
+                {name:"The Orchid",place:"Western Suburbs",rate:3.8,feed:"Good",reviews:"788",pOff:10,oldprice:"9,999",newprice:"8,999",spacific:"Uttar Pradesh"},
+                {name:"Four Seasons Hotel",place:"Worli",rate:4.5,feed:"Wonderful",reviews:"641",pOff:15,oldprice:"19,750",newprice:"17,000",spacific:"Uttar Pradesh"},
+                {name:"Taj Mahal Tower",place:"Colaba",rate:4.8,feed:"Exceptional",reviews:"1,536",pOff:5,oldprice:"22,500",newprice:"21,500",spacific:"Uttar Pradesh"},
+                {name:"Sahara Star",place:"Western Suburbs",rate:3.9,feed:"Good",reviews:"467",pOff:12,oldprice:"15,550",newprice:"12,500",spacific:"Uttar Pradesh"},
+                {name:"Sofitel Mumbai BKC",place:"Bandra East",rate:4.6,feed:"Wonderful",reviews:"631",pOff:13,oldprice:"19,750",newprice:"16,649",spacific:"Uttar Pradesh"},
+                {name:"VITS",place:"Western Suburbs",rate:3.2,feed:"Good",reviews:"324",pOff:20,oldprice:"7,499",newprice:"5,999",spacific:"Uttar Pradesh"},
+                {name:"Trident",place:"Nariman Point",rate:4.6,feed:"Wonderful",reviews:"1,018",pOff:10,oldprice:"15,500",newprice:"12,500",spacific:"Uttar Pradesh"},
+                //Banglore
+                {name:"ITC Grand Central",place:"Parel",rate:4.3,feed:"Excellent",reviews:"480",pOff:10,oldprice:"15,750",newprice:"12,600",spacific:"Banglore"},
+                {name:"The Orchid",place:"Western Suburbs",rate:3.8,feed:"Good",reviews:"788",pOff:10,oldprice:"9,999",newprice:"8,999",spacific:"Banglore"},
+                {name:"Four Seasons Hotel",place:"Worli",rate:4.5,feed:"Wonderful",reviews:"641",pOff:15,oldprice:"19,750",newprice:"17,000",spacific:"Banglore"},
+                {name:"Taj Mahal Tower",place:"Colaba",rate:4.8,feed:"Exceptional",reviews:"1,536",pOff:5,oldprice:"22,500",newprice:"21,500",spacific:"Banglore"},
+                {name:"Sahara Star",place:"Western Suburbs",rate:3.9,feed:"Good",reviews:"467",pOff:12,oldprice:"15,550",newprice:"12,500",spacific:"Banglore"},
+                {name:"Sofitel Mumbai BKC",place:"Bandra East",rate:4.6,feed:"Wonderful",reviews:"631",pOff:13,oldprice:"19,750",newprice:"16,649",spacific:"Banglore"},
+                {name:"VITS",place:"Western Suburbs",rate:3.2,feed:"Good",reviews:"324",pOff:20,oldprice:"7,499",newprice:"5,999",spacific:"Banglore"},
+                {name:"Trident",place:"Nariman Point",rate:4.6,feed:"Wonderful",reviews:"1,018",pOff:10,oldprice:"15,500",newprice:"12,500",spacific:"Banglore"},
+                //Punjab
+                {name:"ITC Grand Central",place:"Parel",rate:4.3,feed:"Excellent",reviews:"480",pOff:10,oldprice:"15,750",newprice:"12,600",spacific:"Punjab"},
+                {name:"The Orchid",place:"Western Suburbs",rate:3.8,feed:"Good",reviews:"788",pOff:10,oldprice:"9,999",newprice:"8,999",spacific:"Punjab"},
+                {name:"Four Seasons Hotel",place:"Worli",rate:4.5,feed:"Wonderful",reviews:"641",pOff:15,oldprice:"19,750",newprice:"17,000",spacific:"Punjab"},
+                {name:"Taj Mahal Tower",place:"Colaba",rate:4.8,feed:"Exceptional",reviews:"1,536",pOff:5,oldprice:"22,500",newprice:"21,500",spacific:"Punjab"},
+                {name:"Sahara Star",place:"Western Suburbs",rate:3.9,feed:"Good",reviews:"467",pOff:12,oldprice:"15,550",newprice:"12,500",spacific:"Punjab"},
+                {name:"Sofitel Mumbai BKC",place:"Bandra East",rate:4.6,feed:"Wonderful",reviews:"631",pOff:13,oldprice:"19,750",newprice:"16,649",spacific:"Punjab"},
+                {name:"VITS",place:"Western Suburbs",rate:3.2,feed:"Good",reviews:"324",pOff:20,oldprice:"7,499",newprice:"5,999",spacific:"Punjab"},
+                {name:"Trident",place:"Nariman Point",rate:4.6,feed:"Wonderful",reviews:"1,018",pOff:10,oldprice:"15,500",newprice:"12,500",spacific:"Punjab"},
+                //Chandigadh
+                {name:"ITC Grand Central",place:"Parel",rate:4.3,feed:"Excellent",reviews:"480",pOff:10,oldprice:"15,750",newprice:"12,600",spacific:"Chandigadh"},
+                {name:"The Orchid",place:"Western Suburbs",rate:3.8,feed:"Good",reviews:"788",pOff:10,oldprice:"9,999",newprice:"8,999",spacific:"Chandigadh"},
+                {name:"Four Seasons Hotel",place:"Worli",rate:4.5,feed:"Wonderful",reviews:"641",pOff:15,oldprice:"19,750",newprice:"17,000",spacific:"Chandigadh"},
+                {name:"Taj Mahal Tower",place:"Colaba",rate:4.8,feed:"Exceptional",reviews:"1,536",pOff:5,oldprice:"22,500",newprice:"21,500",spacific:"Chandigadh"},
+                {name:"Sahara Star",place:"Western Suburbs",rate:3.9,feed:"Good",reviews:"467",pOff:12,oldprice:"15,550",newprice:"12,500",spacific:"Chandigadh"},
+                {name:"Sofitel Mumbai BKC",place:"Bandra East",rate:4.6,feed:"Wonderful",reviews:"631",pOff:13,oldprice:"19,750",newprice:"16,649",spacific:"Chandigadh"},
+                {name:"VITS",place:"Western Suburbs",rate:3.2,feed:"Good",reviews:"324",pOff:20,oldprice:"7,499",newprice:"5,999",spacific:"Chandigadh"},
+                {name:"Trident",place:"Nariman Point",rate:4.6,feed:"Wonderful",reviews:"1,018",pOff:10,oldprice:"15,500",newprice:"12,500",spacific:"Chandigadh"},
+                
+            ];
+        }])
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<html>
+    <head>
+        
+    <title>gallary</title>
+        <style>
+    .slideshow{
+        margin:0 auto;
+        padding-top:50px;
+        height:700px;
+        background:skyblue;
+        box-sizing:border-box;
+            }
+            
+        
+        
+            .content{
+                margin:auto;
+                width:190px;
+                perspective: 1000px;
+                position: relative;
+                padding-top:80px;
+            }
+            .content-carrousel{
+                width: 100%;
+                position: absolute;
+                float: right;
+                animation: rotar 15s infinite linear;
+                transform-style:preserve-3d;
+                
+            }
+            .content-carrousel:hover{
+                animation-play-state: paused;
+                cursor: pointer;
+            }
+            .content-carrousel figure{
+                width: 140%;
+                height: 220px;
+                border: 1px solid #4d444d;
+                overflow: hidden;
+                position: absolute;
+            }
+            .content-carrousel figure:nth-child(1){
+                transform:rotateY(0deg) translateZ(300px);
+                
+            }
+            .content-carrousel figure:nth-child(2){
+                transform:rotateY(40deg) translateZ(300px);
+                
+            }
+            .content-carrousel figure:nth-child(3){
+                transform:rotateY(80deg) translateZ(300px);
+                
+            }
+            .content-carrousel figure:nth-child(4){
+                transform:rotateY(120deg) translateZ(300px);
+                
+            }
+            .content-carrousel figure:nth-child(5){
+                transform:rotateY(160deg) translateZ(300px);
+                
+            }
+            .content-carrousel figure:nth-child(6){
+                transform:rotateY(200deg) translateZ(300px);
+                
+            }
+            .content-carrousel figure:nth-child(7){
+                transform:rotateY(240deg) translateZ(300px);
+                
+            }
+            .content-carrousel figure:nth-child(8){
+                transform:rotateY(280deg) translateZ(300px);
+                
+            }
+            .content-carrousel figure:nth-child(9){
+                transform:rotateY(320deg) translateZ(300px);
+                
+            }
+            .shadow{
+                position: absolute;
+                box-shadow: 0px 0px 20px 0px #000;
+                border-radius:2px;
+                
+            }
+            .shadow:hover{
+                -ms-transform:scale(1.5);
+                -webkit-transform:scale(1.5);
+                transform:scale(1.5);
+            }
+            .content-carrousel img{
+                image-rendering:auto;
+                transition: all 300ms;
+                width:100%;
+                height:100%;
+                
+            }
+            .content-carrousel img:hover{
+                transform:scale(1.2);
+                transition: all 300ms;
+            }
+            
+            @keyframes rotar{
+                from{
+                    transform:rotateY(0deg);
+                    
+                }
+                to{
+                    transform:rotateY(360deg);
+                }
+            }
+          .glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}  
+    </style>
+        
+    </head>
+<body>
+    <div style="align-content: flex-start">
+    <a href="hotelpage.html"><img src="img/gallary/backarrow.png" height="50px;"></a>
+       
+    <center><h4 class="glow">Welcome to Taj's Gallery</h4></center>
+    </div>
+    
+    <section class="slideshow">
+    <div class="content">
+        <div class ="content-carrousel">
+        <figure class ="shadow"><img src="img/gallary/taj1.webp"></figure>
+            <figure class ="shadow"><img src="img/gallary/taj5.jpg"></figure>
+            <figure class ="shadow"><img src="img/gallary/2.jpg"></figure>
+            <figure class ="shadow"><img src="img/gallary/taj2.jpeg"></figure>
+            <figure class ="shadow"><img src="img/gallary/4.jpg"></figure>
+            <figure class ="shadow"><img src="img/gallary/taj4.jpg"></figure>
+            <figure class ="shadow"><img src="img/gallary/taj3.jpg"></figure>
+            <figure class ="shadow"><img src="img/gallary/7.webp"></figure>
+            <figure class ="shadow"><img src="img/gallary/8229_Gorgeous-and-colorful-hotel-room-HD.jpg"></figure>
+            
+        </div>
+        
+        
+        
+        </div>
+    
+    </section>
+    
+ 
+    
+<div style="background-color:orange;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> <b>LITEBOOKY</b>
+    <script>
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.color = "#"+randomColor;
+},2000);
+    </script>
+    
+    
+    </div>
+    
+    <script>
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = "#"+randomColor;
+},2000);
+    </script>
+    
+    
+    </body>
+
+
+
+
+
+
+
+</html>
