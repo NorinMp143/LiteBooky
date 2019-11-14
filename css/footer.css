@@ -1,0 +1,220 @@
+
+.footer_hotels {
+  /*! width: 100%; */
+  /*! max-width: 90%; */
+  /*! margin: 0 auto; */
+  padding: 45px 0;
+}
+.footerDestinations__cityGrid a {
+  margin: ;
+  margin-bottom: 10px;
+  color: #fff;
+}
+footer {
+  background: #00002A;
+  margin-top: 30px;
+}
+.footerDestinations__heading {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    margin-bottom: 10px;
+    color: #2ff;
+}
+.footerDestinations__cityGrid{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+}
+.footerLinks{
+    color: #fff;
+}
+.footerAppIcons__container {
+    margin: 0;
+    padding: 30px 80px !important;
+    border-top: 1px solid hsla(0,0%,100%,.5);
+    box-sizing: border-box;
+    display: flex;
+}
+.footerAppIcons__topLinks {
+    border-right: 1px solid hsla(0,0%,100%,.5);
+    margin: 0;
+    width: 33.33%;
+}
+.footerAppIcons__topLinks:first-child{
+    width: 41.66%;
+}
+.footerAppIcons__appsMessage {
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 25px;
+}
+.appLinks{
+    display: flex;
+    /*! justify-content: space-between; */
+}
+.appLinks div{
+    margin-right: 20px;
+}
+.appLinks div img{
+    border-radius: 5px;
+    /*! margin: 0 auto; */
+    /*! text-align: center; */
+    /*! align-items: center; */
+}
+.footerAppIcons__secondryLinksContainer {
+    padding: 0 32px !important;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: flex;
+}
+.footerAppIcons__secondryLinksContainer a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 0 4px;
+}
+.footerAppIcons__topLinks:last-child {
+    border-right: 0;
+}
+.footer__secondary-wrapper {
+    background-color: #37454d;
+    padding: 32px 5%;
+    margin-top: 0;
+    height: auto;
+    color: #fff;
+    font-size: 12px;
+}
+.company-logo {
+  font-size: 20px;
+  text-align: center;
+}
+.company-logo h1 {
+  margin: 0;
+}
+.footer__copyright-text {
+    color: #9ba2a6;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: center;
+    width: 100%;
+}
+@media (max-width:314.99px){
+    .footer_hotels {
+        padding-left: 50px;
+    }
+    .footerDestinations__cityGrid{
+        grid-template-columns: repeat(1,auto);
+    }
+    .footerAppIcons__container{
+        display: block;
+       padding: 30px 10px !important;
+    }
+    .footerAppIcons__appsMessage{
+        text-align: center;
+    }
+    .footerAppIcons__topLinks{
+        width: 100%;
+        border:none;
+        border-bottom: 1px solid hsla(0,0%,100%,.5);
+    }
+    .footerAppIcons__topLinks:first-child{
+        width: 100%;
+    }
+    .footerAppIcons__topLinks:last-child{
+        border:none;
+    }
+    .appLinks{
+        display: block;
+        max-width: 190px;
+        margin: 0 auto;
+    }
+    .appLinks div{
+        margin-bottom: 20px;
+    }
+}
+@media (min-width:315px) and (max-width:575.99px){
+    .footerAppIcons__container{
+        display: block;
+        padding: 30px 20px !important;
+    }
+    .footerAppIcons__appsMessage{
+        text-align: center;
+    }
+    .footerAppIcons__topLinks{
+        width: 100%;
+        border:none;
+        border-bottom: 1px solid hsla(0,0%,100%,.5);
+    }
+    .footerAppIcons__topLinks:first-child{
+        width: 100%;
+        /*! margin: 0 auto; */
+    }
+    .footerAppIcons__topLinks:last-child{
+        border:none;
+    }
+    .appLinks{
+        display: block;
+        margin: 0 auto;
+        max-width: 190px;
+    }
+    .appLinks div{
+        margin-bottom: 20px;
+        /*! margin-left: auto; */
+    }
+    .footerDestinations__cityGrid{
+        grid-template-columns: repeat(2,auto);
+    }
+}
+@media (min-width:576px) and (max-width:767.99px){
+    .footerDestinations__cityGrid{
+        grid-template-columns: repeat(3,auto);
+    }
+    .appLinks{
+        display: block;
+    }
+    .appLinks div{
+        margin-bottom: 20px;
+    }
+}
+@media (min-width:768px) and (max-width:991.99px){
+    .appLinks{
+        display: block;
+    }
+    .appLinks div{
+        margin-bottom: 20px;
+    }
+}
+#mBox{
+    display: none;
+}
+.mBox {
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    width: 299px;
+    height: 150px;
+    border-radius: 5px;
+    padding: 30px 20px;
+
+}
+
+.mBox button {
+
+    bottom: 30px;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}

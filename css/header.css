@@ -32,6 +32,23 @@ a{
     max-width: 90%;
     margin: 0 auto;
 }
+.head-drop-links{
+    display: none;
+    border: none;
+    padding: 0px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    float:right!important;
+}
+.head-drop-links:hover{
+    background-color: #ff8000;
+}
+.head-drop-links .material-icons{
+    font-size: 28px;
+}
+.head-drop-links:hover .material-icons{
+    color: #fff;
+}
 .header-links{
     margin-left: auto;
 }
@@ -43,7 +60,7 @@ a{
     text-transform: uppercase;
 }
 .header-links a:hover{
-    transition: ease-in-out;
+    transition: 1s ease-in-out;
     color: #0ff;
 }
 .brand-tagline{
@@ -57,34 +74,29 @@ a{
 /*------------------------hotel form ------------------------------*/
 
 .hotel-form{
-    box-shadow: 0px 0px 8px black;
+    box-shadow: 0px 0px 8px #fff;
     color: #fff;
 }
-.hotel-form table td{
-    padding: 0 20px;
+.hotel-form form{
+    display: flex;
+    position: relative;
 }
-.hotel-form table td.where{
-    width: 400px;
+.hotel-form form div{
+    padding: 10px 20px;
 }
-.hotel-form table td.where input::placeholder{
+.hotel-form form div input::placeholder{
     color: #fff;
-    opacity: 1;
+    opacity: 1;    
 }
-.hotel-form table td.where input{
+.hotel-form form div input{
     width: 100%;
     border: none;
     background: none;
     border-bottom: 2px solid #eee;
     color: #0ff;
 }
-.check-in div,.check-out div,.guest div{
-    border-bottom: 2px solid #eee;
-}
-.hotel-form table td.check-in,.hotel-form table td.check-out{
-    width: 150px;
-}
-.hotel-form table td.guest{
-    width: 200px;
+.hotel-form form div.where{
+    
 }
 .hotel-form .form-fields{
     padding: 12px 20px 15px;
@@ -112,10 +124,14 @@ a{
     max-height: 225px;
     overflow: auto;
     border-radius: 5px;
+    position: absolute;
+    top: 40px;
 }
 .place ul{
     background: #fff;
     padding: 5px 0;
+    margin: 0;
+    color: #000;
 }
 .place ul li{
     cursor: pointer;
@@ -132,3 +148,114 @@ li{
 }
 
 /*----------------end hotel form---------------------*/
+
+
+/*----------------------------------*/
+
+
+@media (max-width: 575.98px) { 
+    .header-brand{
+        display: flex;width: 100%;
+    }
+    .head-drop-links{
+        display: block;
+        float: right;margin-left: auto;
+    }
+    #header-links{
+        display: none;
+    }
+    .header-links{
+        padding: 20px;
+        width: 185px;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 100px;
+        right: 0;
+        bottom: 0;
+        background: #ff8000;
+        animation: anim 1s; 
+    }
+    @keyframes anim {
+         0%{
+            right: -185px;
+        }
+        100%{
+            right: 0;
+        }
+    }
+    .header-links a{
+        display: block;
+    }
+    .header-links a{
+        padding: 0 10px;
+        background-color: #fff;
+        color: #008000;
+        margin-bottom: 10px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-left: 5px solid #008000;
+    }
+    .header-links a:hover{
+        border-bottom: none;
+        background-color: #008000;
+        color: #fff;
+        border-left: 5px solid #fff;
+    }
+    .hotel-form form{
+        display: block;
+        position: relative;
+    }
+    .hotel-form form div input{
+      
+    }
+}
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .header{
+        text-align: center;
+    }
+    .header-brand,.header-links{
+        width: 100%;
+    }
+    .header-links a{
+        padding: 5px 10px;
+    }
+    .hotel-form form{
+        flex-wrap: wrap;
+    }
+    .hotel-form form div{
+        width: 50%;
+    }
+    .hotel-form form div input{
+        width: 100%;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .header-links a{
+        padding: 5px 10px;
+    }
+    .hotel-form form{
+        flex-wrap: wrap;
+    }
+    .hotel-form form div{
+        width: 50%;
+    }
+    .hotel-form form div input{
+        max-width: 100%;
+    }
+    
+}
+
+/*/ Large devices (desk992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .hotel-form form div.where input{
+        width: 250px;
+        max-width: 100%;
+    }
+}

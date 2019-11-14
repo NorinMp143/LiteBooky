@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding:0;
+    
+}
+.container{
+    width:100%;
+    height:auto;
+    display:flex;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+.about{
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/8229_Gorgeous-and-colorful-hotel-room-HD.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap:wrap;
+    
+}
+.text{
+    
+    font-size:30px;
+    color:#fff;
+    font-family:sans-serif;
+    text-shadow:0px 15px 12px #000;
+}
+b{
+    font-size:50px;
+    color: #000;
+    font-weight: 500px;
+    
+}
+.line{
+    width:200px;
+    height:8px;
+    background-color:#17ff8d;
+    display:block;
+    position:relative;
+    border-radius:5px;
+    left:10%;
+    box-shadow:0px 15px 12px 0px #000;
+}
+.content{
+    padding-bottom: 10px;
+    padding-top: 2px;
+    width:100%;
+    height:auto;
+    background-color: orangered;
+    font-size:23px;
+    font-family:audiowide;
+    color:#333;
+    line-height:30px;
+    text-align:center;
+    
+}
+footer{
+     
+    width:100%;
+    height:auto;
+    background-color: #333;
+    color:#17ff8d;
+    font-size:23px;
+    text-align: center;
+    line-height: 50px;  
+}

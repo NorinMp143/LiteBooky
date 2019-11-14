@@ -63,7 +63,7 @@ header {
     align-items:center;
     position: relative;
     justify-content: space-between;
-    background: url('career/career.jpg');
+    background: url('../img/career/career.jpg');
 }
 .left-section{
     margin-left: 50px;

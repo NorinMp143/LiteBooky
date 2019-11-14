@@ -1,0 +1,137 @@
+body{
+        background: black;
+        margin:0;
+        padding:0;
+    }
+    #front{
+        width: 250px;
+        height:250px;
+        position:relative;
+        top:200px;
+        left:50px;
+        color:orange;
+    }
+    #right{
+        width: 250px;
+        height:250px;
+        position: absolute;
+        top:200px;
+        left:4px;
+        animation: right 1s ease;
+        opacity: 1;
+        transform:scale(.8);
+    }
+    #left{
+        width: 250px;
+        height: 250px;
+        position:absolute;
+        top: 200px;
+        left: 250px;
+        animation: left 1s ease;
+        opacity: 1;
+        transform:scale(.8); 
+         
+    }
+    
+     #left1{
+        width: 250px;
+        height: 250px;
+        position:absolute;
+        top: 200px;
+        left: 250px;
+        animation: left 1s ease;
+        opacity: 1;
+        transform:scale(.8); 
+         
+    }
+     @keyframes left1{
+        0%{
+            top:200px;
+            left:500px;
+            width:250px;
+            height:250px;
+            opacity:0;
+            transform:scale(1);
+        }
+        100%{
+            position:fixed;
+            top:200px;
+            left: 1000px;
+            width: 250px;
+            height: 250px;
+            transform:sclae(.75);
+            opacity: 1;
+            
+        }
+    }
+    @keyframes op{
+        0%{
+            opacity:0;
+            
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes left{
+        0%{
+            top:200px;
+            left:500px;
+            width:250px;
+            height:250px;
+            opacity:0;
+            transform:scale(1);
+        }
+        100%{
+            position:fixed;
+            top:200px;
+            left: 1000px;
+            width: 250px;
+            height: 250px;
+            transform:sclae(.8);
+            opacity: 1;
+            
+        }
+    }
+    @keyframes right{
+        0%{
+            top:200px;
+            left:500px;
+            width:250px;
+            height:250px;
+            opacity:0;
+            transform:scale(1);
+        }
+        100%{
+            position:fixed;
+            top:200px;
+            left: 1000px;
+            width: 250px;
+            height: 250px;
+            transform:sclae(.8);
+            opacity: 1;
+            
+        }
+    }
+    
+    @keyframes right1{
+        0%{
+            top:200px;
+            left:500px;
+            width:250px;
+            height:250px;
+            opacity:0;
+            transform:scale(1);
+        }
+        100%{
+            position:fixed;
+            top:200px;
+            left: 1000px;
+            width: 250px;
+            height: 250px;
+            transform:sclae(.75);
+            opacity: 1;
+            
+        }
+    }
+    

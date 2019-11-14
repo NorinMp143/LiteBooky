@@ -1,0 +1,253 @@
+@CHARSET "ISO-8859-1";
+* {
+	margin:0px;
+	padding:0px;
+}
+
+.main_div{
+	text-align:center;
+	color:#804000;
+	font-size:-120px;
+	margin-top:-120px;
+	position:top;
+	font-style: italic;
+	
+}
+
+body{
+
+padding:200px;
+padding-left:550px;
+padding-right:550px;
+background-image:url('burj-al-arab-jumeirah-29607914-1559042473-ImageGalleryLightboxLarge.jpg');
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #e7e7e7;
+   
+}
+
+h1{
+	text-align:center;
+	color:#8000ff;
+	font-size:35px;
+	margin-top:26px;
+	position:top;
+}
+.login {
+
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  margin: -184px 0px 0px -155px;
+  background: rgba(0,0,0,0.5);
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.3),inset 0px 1px 0px rgba(255,255,255,0.07)
+}
+input{
+ width:250px;
+ height:30px;
+ 
+}
+
+
+
+input[type="submit"]{
+   background: #3399ff;
+  border: 0;
+  width: 250px;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.4s linear;
+}
+
+.contenido {
+	width:100%;
+	height:100%;
+}
+.backgroundslider {
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:-1;
+}
+.backgroundslider li {
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	opacity:0;
+	animation:imagenes 18s linear infinite;
+	-moz-animation:imagenes 18s linear infinite;
+	-ms-animation:imagenes 18s linear infinite;
+	-o-animation:imagenes 18s linear infinite;
+	-webkit-animation:imagenes 18s linear infinite;
+}
+.backgroundslider li:nth-child(1) {
+	background-image:url('dubai-luxury-boutique-hotel-rooms-interior-design-hd-wallpapers-1024x787.jpg');
+}
+.backgroundslider li:nth-child(2) {
+	background-image:url("8229_Gorgeous-and-colorful-hotel-room-HD.jpg");
+	animation-delay:6s;
+	-moz-animation-delay:6s;
+	-ms-animation-delay:6s;
+	-o-animation-delay:6s;
+	-webkit-animation-delay:6s;
+}
+.backgroundslider li:nth-child(3) {
+	background-image:url("luxurious-hotel-room-1920x1080-wallpaper-11239.jpg");
+	animation-delay:12s;
+	-moz-animation-delay:12s;
+	-ms-animation-delay:12s;
+	-o-animation-delay:12s;
+	-webkit-animation-delay:12s;
+}
+.backgroundslider li:nth-child(4) {
+	background-image:url("RR_Hotel_KingSuite3.jpg");
+	animation-delay:18s;
+	-moz-animation-delay:18s;
+	-ms-animation-delay:18s;
+	-o-animation-delay:18s;
+	-webkit-animation-delay:18s;
+}
+.backgroundslider li:nth-child(5) {
+	background-image:url("xIschia-Hotel-Terme-San-Michele-Camera-Classic-Piano-Terra-,P2001-1620x1080.jpg.pagespeed.ic.Nafwb_G2av.jpg"RR_Hotel_KingSuite3.jpg"");
+	animation-delay:24s;
+	-moz-animation-delay:24s;
+	-ms-animation-delay:24s;
+	-o-animation-delay:24s;
+	-webkit-animation-delay:24s;
+}
+.backgroundslider li:nth-child(6) {
+	background-image:url("seminaire_les_jardins_de_la_villa-1619x1080.jpg");
+	animation-delay:30s;
+	-moz-animation-delay:30s;
+	-ms-animation-delay:30s;
+	-o-animation-delay:30s;
+	-webkit-animation-delay:30s;
+}
+@keyframes imagenes {
+	0% { opacity:0; animation-timing-function:ease-in; }
+	10% { opacity:1; animation-timing-function:ease-out; }
+	25% { opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+@-moz-keyframes imagenes {
+	0% { opacity:0; animation-timing-function:ease-in; }
+	10% { opacity:1; animation-timing-function:ease-out; }
+	25% { opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+@-o-keyframes imagenes {
+	0% { opacity:0; animation-timing-function:ease-in; }
+	10% { opacity:1; animation-timing-function:ease-out; }
+	25% { opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+@-ms-keyframes imagenes {
+	0% { opacity:0; animation-timing-function:ease-in; }
+	10% { opacity:1; animation-timing-function:ease-out; }
+	25% { opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+@-webkit-keyframes imagenes {
+	0% { opacity:0; animation-timing-function:ease-in; }
+	10% { opacity:1; animation-timing-function:ease-out; }
+	25% { opacity:1; transform:scale(1); }
+	50% { opacity:0; transform:scale(2) rotate(20deg); }
+	100% { opacity:0; }
+}
+h2{
+    text-align:center;
+    
+    
+}
+input[type=text],input[type=password]{
+    width:100%;
+    box-sizing:border-box;
+    padding:12px 5px;
+    background:rgba(0,0,0,0.10);
+    outline:none;
+    border:none;
+    border-bottom: 1px dotted #fff;
+    color:#fff;
+    border-radius:5px;
+    margin:5px;
+    font-weight:bold;
+    
+     
+}
+input[type=submit]{
+    width:100%;
+    box-sizing:border-box;
+    padding:10px 0;
+    margin-top:30px;
+    
+}
+*{
+    margin:0;
+    padding:0;
+    font-family:Century Gothic;
+    
+}
+ul{
+    float:right;
+   list-style: -type:none; 
+    margin-top: 25px;
+}
+ul li{
+    display:inline-block;
+    
+}
+ul li a{
+    text-decoration: :cone;
+    color:royalblue;
+    padding:5px;
+    border:1px solid transparent;
+    transition:0.6s ease;
+     
+    
+}
+ul li a:hover{
+    background-color:yellow
+        color:#000;
+}
+ul lo.active a{
+    background-color:aqua;
+    color:bisque;
+    
+}
+.logo img{
+    float:left;
+    width:150px;
+    height:auto;
+    margin-top: 1px;
+}
+.main{
+    max-width: :1200px;
+    margin-top:90px;
+}
+.wrap{
+    max-width:400px;
+    border-radius:20px;
+    margin:auto;
+    background:rgba(0,0,0,0.8);
+    box-sizing:border-box;
+    padding:40px;
+    color:#fff;
+    margin-top:50px;
+}

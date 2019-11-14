@@ -79,7 +79,7 @@ header {
     width: 400px;
 }
 .m-hotel-form table td.where input::placeholder{
-    color: #fff;
+    color: #000;
     opacity: 1;
 }
 .m-hotel-form table td.where input{
@@ -165,6 +165,8 @@ li{
     background: none;
     border: 2px solid #272883;
     padding: 5px 10px;
+    max-width: 94%;
+    box-sizing: border-box;
 }
 .h-deatil{
     width:100%;
@@ -260,3 +262,23 @@ img{
     right: 0;
 }
 
+.noplace {
+  position: fixed;
+  z-index: -2;
+  left: 60%;
+  transform: translate(-50%,-50%);
+  top: 60%;
+}
+
+.shortby {
+  position: fixed;
+  top: 265px;
+  background: #000;
+  padding: 10px;
+  color: #fff;
+}
+.shortby div {
+  padding: ;
+  margin: 10px 0;
+  /*! box-sizing: border-box; */
+}
