@@ -65,7 +65,7 @@ a{
 }
 .brand-tagline{
     width: 100%;
-    margin: 85px auto;
+    margin: 52px auto;
     max-width: 317px;
     color: #fff;
     text-shadow: 0px 0px 5px black;
@@ -76,6 +76,7 @@ a{
 .hotel-form{
     box-shadow: 0px 0px 8px #fff;
     color: #fff;
+    background-color: rgb(56,56,56, 0.5);
 }
 .hotel-form form{
     display: flex;
