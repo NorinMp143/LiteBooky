@@ -53,6 +53,15 @@ body{
     width: 100%;
     border-radius:50%;
 }
+
+.p-image .p-left img:hover{
+    height: 220px;
+    width: 220px;
+}
+.p-image .p-right img:hover{
+    height: 220px;
+    width: 220px;
+}
 .p-image .p-middle .title{
     text-align: center;
     font-weight:bold;
